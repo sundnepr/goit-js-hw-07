@@ -24,3 +24,11 @@ const images = [
     alt: "Lighthouse Coast Sea",
   }
 ];
+
+const list = document.querySelector(".gallery");
+
+const image = document.createElement("img");
+image.src= "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
+image.alt = "Lighthouse Coast Sea",
+console.log(image); 
+

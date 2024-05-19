@@ -12,8 +12,4 @@ body {
   color: #212121;
   line-height: 1.5;
 
-  .item {
-    background-color: aquamarine;
-    font-style: italic;
-  }
 }
