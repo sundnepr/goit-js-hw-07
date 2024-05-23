@@ -13,3 +13,15 @@ body {
   line-height: 1.5;
 
 }
+
+.gallery{
+  display: flex;
+  gap: 24px;
+  list-style: none;
+ 
+}
+
+.js-img-item-img{
+  height: 300px;
+  width: 360px;
+}

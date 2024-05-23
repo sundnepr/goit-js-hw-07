@@ -27,8 +27,20 @@ const images = [
 
 const list = document.querySelector(".gallery");
 
-const image = document.createElement("img");
-image.src= "https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg",
-image.alt = "Lighthouse Coast Sea",
-console.log(image); 
+function myImages(myImage) {
+  return `<li class="img-item">
+  <img class="js-img-item-img" src=${myImage.url} alt="${myImage.alt}"/>
+</li>`;
+}
+
+function imgTemplate(arr) {
+  return arr.map(myImages).join('');
+}
+
+const markup = imgTemplate(images.slice(0, 3));
+
+list.innerHTML = markup;
+
+const imgMy = document.querySelectorAll("js-img-item-img");
+imgMy.style.width = `360px`;
 
