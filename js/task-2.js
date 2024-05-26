@@ -38,9 +38,17 @@ function imgTemplate(arr) {
 }
 
 const markup = imgTemplate(images.slice(0, 3));
-
 list.innerHTML = markup;
 
-const imgMy = document.querySelectorAll("js-img-item-img");
-imgMy.style.width = `360px`;
+
+// const gallery = document.querySelector(".gallery");
+// gallery.style.display = flex;
+// gallery.style.gap = `24px`;
+// gallery.style  = none;
+ 
+
+
+// const imgMy = document.querySelector(".js-img-item-img");
+// imgMy.style.width = `360px`;
+// imgMy.style.height = `300px`;
 
