@@ -1,27 +1,37 @@
 const loginForm = document.querySelector(".login-form");
 console.log(loginForm);
 
-const formElem = document.querySelector('.js-user-form');
-const messagesElem = document.querySelector('.js-messages');
+function validateEmail(email) {
 
-formElem.addEventListener('submit', e => {
-  e.preventDefault();
+const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
 
-  const data = {
-    username: formElem.elements.username.value,
-    message: formElem.elements.message.value,
-  };
+return regex.test(email);
 
-  const markup = messageTemplate(data);
-
-  messagesElem.insertAdjacentHTML('beforeend', markup);
-
-  formElem.reset();
-});
-
-function messageTemplate(obj) {
-  return `<li>
-  <p>Username: ${obj.username}</p>
-  <p>${obj.message}</p>
-</li>`;
 }
+
+loginForm.addEventListener(`submit`, event => {
+
+  event.preventDefault();
+
+  const inpEmail = loginForm.elements[`email`];
+  const inpPass = loginForm.elements[`password`];
+
+  const email = inpEmail.value.trim();
+  const password = inpPass.value.trim();
+  
+  if (!validateEmail(email)) {
+
+  return alert('All form fields must be filled in'); 
+
+  } 
+
+       const formNew = {
+        email: email,
+        password: password,
+      };
+
+      console.log(formNew);
+      loginForm.reset();
+    
+  
+})
